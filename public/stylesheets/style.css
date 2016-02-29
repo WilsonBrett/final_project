@@ -2,6 +2,10 @@ body {
 	font-size: 16px;
 	font-famly: Helvetica, Arial, sans-serif;
 }
+header {
+	background-color: rgb(50,50,50);
+	padding: 2rem;
+}
 a {
 	text-decoration: none;
 }
@@ -17,6 +21,9 @@ a:active {
 section {
 	padding: 2rem;
 }
+footer {
+	background-color: rgb(50,50,50);
+}
 .wrapper {
 	max-width: 1000px;
 }
@@ -27,3 +34,7 @@ section {
 	height: 0;
 	clear: both;
 }
+
+
+
+
