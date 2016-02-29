@@ -1,0 +1,29 @@
+body {
+	font-size: 16px;
+	font-famly: Helvetica, Arial, sans-serif;
+}
+a {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	color: blue;
+}
+a:active {
+	color: red;
+}
+section {
+	padding: 2rem;
+}
+.wrapper {
+	max-width: 1000px;
+}
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
