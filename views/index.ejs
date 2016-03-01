@@ -1,10 +1,16 @@
 <% include ./partials/header %>
-	<header><h1>Before and After Game</h1></header>
+	<header><h1>Guess That Phrase!</h1></header>
 	<section class="container">
 		<div class="row">
 			<div id="main" class="col-md-9" ng-controller="LettersController as letrs">
-				<div class="row" ng-repeat="letr in letrs.setloop(4) track by $index">
-					<letter phraseletter='' ng-repeat="letr in letrs.setloop(12) track by $index"></letter>
+				<div class="row" ng-repeat="row in letrs.setloop(4) track by $index">
+					<letter
+						ng-repeat="cell in letrs.setloop(12) track by $index"
+						phraseletter={{letrs.setPhrase(id)}}
+						id={{letrs.setLetterID($parent.$index,$index)}}
+						ng-class={'notvisible':{{letrs.hide(letrs.setLetterID($parent.$index,$index))}}}
+					>
+					</letter>
 				</div>
 			</div>
 			<div class="col-md-3">
@@ -13,6 +19,10 @@
 					<button>Save</button>
 					<button>Exit</button>
 				</nav>
+				<form class='col-md-offset-1 col-md-10' id='guess_letter' action='post' target='#'>
+					<input type='text' placeholder='Enter Letter'>
+					<input type='submit' value='Submit'>
+				</form>
 			</div>
 		</div>
 	</section>

@@ -28,6 +28,9 @@ a:active {
 section {
 	padding: 2rem;
 }
+p {
+
+}
 footer {
 	padding: 2rem;
 	background-color: rgb(40,40,40);
@@ -70,6 +73,16 @@ nav button:active {
 	background-color: lightgreen;
 	width: 100%;
 	height: 100%;
+	text-align: center;
+}
+.green_back > p {
+	/*wish I could could vertical align middle and display inline-block with height 100%. Doesn't work.*/
+	display: inline;
+	vertical-align: -25px;
+	/*visibility: hidden;*/
+}
+.notvisible {
+	visibility: hidden;
 }
 .wrapper {
 	max-width: 1000px;
@@ -82,9 +95,10 @@ nav button:active {
 	clear: both;
 }
 #main {
-	border: 2px solid black;
-	background-color: green;
-	padding: .25rem;
+	border: 2px solid green;
+	background-color: black;
+	padding-left: 0;
+	padding-right: 0px;
 }
 #main .row {
 	margin: 0;
@@ -94,6 +108,27 @@ nav button:active {
 }
 #main .letter_box + .letter_box {
 	border-left: 2px solid green;
+}
+#guess_letter {
+	padding: 2rem;
+	border-radius: 5px;
+	background-color: grey;
+	margin-top: 3rem;
+}
+#guess_letter input {
+	display: block;
+	border-radius: 5px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	width: 80%;
+}
+#guess_letter input[type='submit'] {
+	margin-top: 2rem;
+	border: 1px solid grey;
+}
+#guess_letter input[type='submit']:hover {
+	background-color: yellow;
 }
 #bottom_panel {
 	
