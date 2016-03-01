@@ -6,8 +6,8 @@
 		var directive = {};
 		directive.restrict = 'E';
 		directive.replace = true;
-		directive.templateUrl = '_letterView.html';
-		directive.scope = {phraseLetter: '@'};
+		directive.templateUrl = '/javascripts/templates/_letterView.html';
+		directive.scope = {phraseletter: '@'};
 		return directive;
 	});
 })();

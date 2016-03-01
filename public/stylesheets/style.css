@@ -51,6 +51,14 @@ nav button:hover {
 nav button:active {
 	background-color: orange;
 }
+.row {
+	border: 1px solid black;
+	
+}
+.letter_box_off {
+	height: 70px;
+	background-color: rgb(50,175,106);
+}
 .wrapper {
 	max-width: 1000px;
 }
@@ -62,7 +70,7 @@ nav button:active {
 	clear: both;
 }
 #main {
-	background-color: blue;
+	background-color: lightgray;
 }
 #bottom_panel {
 	
