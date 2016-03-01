@@ -2,25 +2,18 @@
 	<header><h1>Before and After Game</h1></header>
 	<section class="container">
 		<div class="row">
-			<div id="main" class="col-md-9" ng-controller="LetterController as let">
-				<div class="row">
-					<letter phraseletter='Wholly Molly'></letter>
-				</div>
-				<div class="row">
-					<letter phraseletter='Wholly Molly'></letter>
-				</div>
-				<div class="row">
-					<letter phraseletter='Wholly Molly'></letter>
-				</div>
-				<div class="row">
-					<letter phraseletter='Wholly Molly'></letter>
+			<div id="main" class="col-md-9" ng-controller="LettersController as letrs">
+				<div class="row" ng-repeat="letr in letrs.setloop(4) track by $index">
+					<letter phraseletter='' ng-repeat="letr in letrs.setloop(12) track by $index"></letter>
 				</div>
 			</div>
-			<nav class="col-md-3">
-				<button>New Game</button>
-				<button>Save</button>
-				<button>Exit</button>
-			</nav>
+			<div class="col-md-3">
+				<nav class="col-md-offset-1 col-md-10">
+					<button>New Game</button>
+					<button>Save</button>
+					<button>Exit</button>
+				</nav>
+			</div>
 		</div>
 	</section>
 	<section id="bottom_panel" class="container">
