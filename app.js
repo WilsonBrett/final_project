@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var session = require('express-session');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -22,8 +24,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+mongoose.connect(process.env.DB_CONN_FINAL_PROJECT);
+
+//cookie parser, express-session, and router have to be used in that order.
+app.use(session({
+  name: 'session', 
+  secret: 'finalprojstring',
+  duration: 30 * 60 * 1000,
+  activeDuration: 5 * 60 * 1000,
+  resave: true,
+  saveUninitialized: true
+}));
+
 app.use('/', routes);
-app.use('/users', users);
+app.use(users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

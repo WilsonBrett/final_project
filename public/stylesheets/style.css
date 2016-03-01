@@ -1,3 +1,4 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
 	font-size: 16px;
 	font-famly: Helvetica, Arial, sans-serif;
@@ -5,6 +6,10 @@ body {
 header {
 	background-color: rgb(50,50,50);
 	padding: 2rem;
+	text-align: center;
+}
+h1 {
+	color: yellow;
 }
 a {
 	text-decoration: none;
@@ -22,7 +27,29 @@ section {
 	padding: 2rem;
 }
 footer {
+	padding: 2rem;
 	background-color: rgb(50,50,50);
+	color: yellow;
+	text-align: center;
+}
+nav {
+	background-color: red;
+}
+nav button {
+	display: block;
+	width: 60%;
+	border: 1px solid grey;
+	background-color: white;
+	color: black;
+	border-radius: 5px;
+	padding: .5rem 1rem;
+	margin: 1rem auto;
+}
+nav button:hover {
+	background-color: yellow;
+}
+nav button:active {
+	background-color: orange;
 }
 .wrapper {
 	max-width: 1000px;
@@ -34,7 +61,16 @@ footer {
 	height: 0;
 	clear: both;
 }
-
-
+#main {
+	background-color: blue;
+}
+#bottom_panel {
+	
+}
+#bottom_panel > div > div {
+	text-align: center;
+	background-color: grey;
+	border: 1px solid black;
+}
 
 
