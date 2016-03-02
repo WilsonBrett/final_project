@@ -24,21 +24,22 @@
 		//};
 
 		this.phrase = ['A','B','C','D','E'];	
-
+		var counter = 0;
 		this.setPhrase = function(row, col) {
 			this.id = (row * 12) + col + 1;
 			if(this.id !== 1 && this.id !== 12 && this.id !== 37 && this.id !== 48) {
 				if(this.counter <= (this.phrase_len - 1)) {
 					//return this.id;
 					//this.character = this.phrase[counter];
-					//this.counter = this.counter + 1;
+					//counter = counter + 1;
+					//console.log(counter);
 					//return this.character;
-					return 1;
 				}
 			}
 		};
 		
     	this.setLetterID = function(row, col){
+			console.log(row);
 			return (row * 12) + col + 1;
 		};
 
