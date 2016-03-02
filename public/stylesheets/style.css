@@ -69,20 +69,19 @@ nav button:active {
 	background-color: black;
 	padding: .75rem;
 }
-.green_back {
-	background-color: lightgreen;
+.letter_box > div {
 	width: 100%;
 	height: 100%;
 	text-align: center;
+	display: block;
+	font-size: 32px;
 }
-.green_back > p {
-	/*wish I could could vertical align middle and display inline-block with height 100%. Doesn't work.*/
-	display: inline;
-	vertical-align: -25px;
-	/*visibility: hidden;*/
+.hasletter {
+	background-color: white;
+	font-size: 0px !important;
 }
-.notvisible {
-	visibility: hidden;
+.noletter {
+	background-color: lightgreen;
 }
 .wrapper {
 	max-width: 1000px;

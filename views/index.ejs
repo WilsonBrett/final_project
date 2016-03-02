@@ -3,10 +3,10 @@
 	<section class="container">
 		<div class="row">
 			<div id="main" class="col-md-9" ng-controller="LettersController as letrs">
-				<div class="row" ng-repeat="row in letrs.setloop(1) track by $index">
+				<div class="row" ng-repeat="row in letrs.setLoop(4) track by $index">
 					<letter
-						ng-repeat="cell in letrs.setloop(1) track by $index"
-						phraseletter={{letrs.setLetterID(0,0)}}
+						ng-repeat="cell in letrs.setLoop(12) track by $index"
+						phraseletter={{letrs.setBoxLetter($parent.$index,$index)}}
 					>
 					</letter>
 				</div>
