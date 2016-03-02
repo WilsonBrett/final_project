@@ -87,7 +87,7 @@ nav button:active {
 .wrapper {
 	max-width: 1000px;
 }
-.clearfix:after {
+.clearfix {
 	content: ".";
 	visibility: hidden;
 	display: block;
@@ -97,7 +97,7 @@ nav button:active {
 #main {
 	border: 2px solid green;
 	background-color: black;
-	padding-left: 0;
+	padding-left: 0px;
 	padding-right: 0px;
 }
 #main .row {

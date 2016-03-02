@@ -6,9 +6,8 @@
 				<div class="row" ng-repeat="row in letrs.setloop(4) track by $index">
 					<letter
 						ng-repeat="cell in letrs.setloop(12) track by $index"
-						phraseletter={{letrs.setPhrase(id)}}
-						id={{letrs.setLetterID($parent.$index,$index)}}
-						ng-class={'notvisible':{{letrs.hide(letrs.setLetterID($parent.$index,$index))}}}
+						phraseletter={{letrs.setPhrase($parent.$index, $index)}}
+						ng-class={'notvisible':{{letrs.hide(letrs.setLetterID($parent.$index, $index))}}}
 					>
 					</letter>
 				</div>

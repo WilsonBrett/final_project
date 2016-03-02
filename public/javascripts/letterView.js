@@ -7,7 +7,7 @@
 		directive.restrict = 'E';
 		directive.replace = true;
 		directive.templateUrl = '/javascripts/templates/_letterView.html';
-		directive.scope = {phraseletter: '@', boxNum: '@'};
+		directive.scope = {phraseletter: '@'};
 		return directive;
 	});
 })();
