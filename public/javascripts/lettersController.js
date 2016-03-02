@@ -3,15 +3,28 @@
 	var app = angular.module('BeforeAndAfterApp');
 
 	app.controller('LettersController', function(){
-		
-		this.setloop = function(len){
-			return this.arr = new Array(len);
+
+		var letters = this;
+		var count = 0;
+		letters.arr = function() {
+			count = count + 1;
+			console.log(count);
+			//return letters.cells = [1,2,3,4,5,6,7,8,9,10,11,12];
 		};
 
-		this.setPhrase = function(indx){
-			this.boxNum = indx;
-			this.phrase = ['A','B','C','D','E'];
-			//return a letter from the phrase to set the value of the cell
+		letters.setRows = function(len){
+			var arr = new Array(len);
+			return arr;
+		};
+
+		letters.setCells = function(len){
+			var arr = new Array(len);
+			return arr;
+		};
+
+		letters.setPhrase = function(cell){
+			//this.phrase = ['A','B','C','D','E'];
+			console.log(cell);
 		};
 		
     	this.setLetterID = function(row, col){

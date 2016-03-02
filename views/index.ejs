@@ -2,14 +2,9 @@
 	<header><h1>Guess That Phrase!</h1></header>
 	<section class="container">
 		<div class="row">
-			<div id="main" class="col-md-9" ng-controller="LettersController as letrs">
-				<div class="row" ng-repeat="row in letrs.setloop(4) track by $index">
-					<letter
-						ng-repeat="cell in letrs.setloop(12) track by $index"
-						phraseletter={{letrs.setPhrase(id)}}
-						id={{letrs.setLetterID($parent.$index,$index)}}
-						ng-class={'notvisible':{{letrs.hide(letrs.setLetterID($parent.$index,$index))}}}
-					>
+			<div id="main" class="col-md-9" ng-controller="LettersController as letters">
+				<div class="row">
+					<letter ng-repeat="cell in letters.arr()">
 					</letter>
 				</div>
 			</div>
