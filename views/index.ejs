@@ -12,9 +12,9 @@
 					</letter>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3" ng-controller="LettersController as ctrl">
 				<nav class="col-md-offset-1 col-md-10">
-					<button type='button'>New Game</button>
+					<button type='button' ng-click='ctrl.getPhrase()'>New Game</button>
 					<button type='button'>Save</button>
 					<button type='button'>Exit</button>
 					<button type='button' id='reveal_btn'>Reveal Game</button>

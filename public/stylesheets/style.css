@@ -78,7 +78,10 @@ nav button:active {
 	padding-top: 2rem;
 }
 .hasletter {
-	background-color: white;
+	background-image: url('../images/pat_head.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 	font-size: 0px !important;
 }
 .noletter {
