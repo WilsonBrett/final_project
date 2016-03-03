@@ -1,7 +1,9 @@
 $(function(){
+	var score = 0;
 
 	//reveal button functionality
 	$('#reveal_btn').click(function(){
+		$('#letter_input').attr('disabled','true');
 		$('.hasletter').attr('class','reveal');
 	});
 	
@@ -30,7 +32,13 @@ $(function(){
 
 		if (!hits) {//check to see if there were any matches and write the value to the msgPane if not
 			$('#msgPane p').append(character);
-			
+			score -= 500;
+			$('#score p').empty();
+			$('#score p').append(score);
+		} else {
+			score += (hits * 500);
+			$('#score p').empty();
+			$('#score p').append(score);
 		}
 	});
 });

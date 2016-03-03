@@ -23,14 +23,14 @@
 			return (row * 12) + col;
 		}
 
+		this.phrase = generatePhrase();
+
 		function generatePhrase(){
-			var phrases = ["aussy aussy aussy","will work for nutella","tom brady bunch","sean shannon sharpe", "Sea Salt n Peppah"];
+			var phrases = ["aussy aussy aussy","old spice girls","tom brady bunch","sean shannon sharpe", "Sea Salt n Peppah"];
 			var index = Math.floor(Math.random()*phrases.length);
 			var new_phrase = phrases[index].toUpperCase().split("");
 			return new_phrase;
 		}
-
-		this.phrase = generatePhrase();
 
 		this.setBoxLetter = function(row, col) {
 			var id = (row * 12) + col;
@@ -40,11 +40,6 @@
 				return this.phrase[id];
 			}
 		};
-
-		this.getPhrase = function(){
-			var anything = generatePhrase();			
-
-		}
 	});
 
 })();
