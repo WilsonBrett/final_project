@@ -12,6 +12,7 @@ header {
 }
 h1 {
 	color: yellow;
+	font-size: 5rem;
 }
 a {
 	text-decoration: none;
@@ -117,6 +118,7 @@ nav button:active {
 	border-radius: 5px;
 	background-color: grey;
 	margin-top: 3rem;
+	text-align: center;
 }
 #guess_letter input {
 	display: block;
@@ -127,19 +129,37 @@ nav button:active {
 	width: 80%;
 }
 #guess_letter input[type='submit'] {
-	margin-top: 2rem;
+	margin-top: 1rem;
 	border: 1px solid grey;
 }
 #guess_letter input[type='submit']:hover {
 	background-color: yellow;
 }
-#bottom_panel {
-	
+#guess_letter p {
+	margin-top: 1rem;
+	font-size: 1.25rem;
+	color: yellow;
 }
 #bottom_panel > div > div {
-	text-align: center;
 	background-color: grey;
+	color: yellow;
 	border: 1px solid black;
+	padding: 2rem 10rem;
+	min-height: 300px;
+	border-radius: 5px;
+	word-wrap: break-word;
+	text-align: center;
+}
+#bottom_panel > div > div h2 {
+	text-align: center;
+	font-size: 3.5rem;
+	padding: 0;
+	margin: 0 0 1rem;
+	letter-spacing: .2rem;
+}
+#bottom_panel > div > div p {
+	letter-spacing: 2rem;
+	font-size: 3rem;
 }
 
 

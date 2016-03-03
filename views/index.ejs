@@ -1,5 +1,5 @@
 <% include ./partials/header %>
-	<header><h1>Guess That Phrase!</h1></header>
+	<header><h1>R S T L N E !</h1></header>
 	<section class="container">
 		<div class="row">
 			<div id="main" class="col-md-9" ng-controller="LettersController as letrs">
@@ -14,13 +14,14 @@
 			</div>
 			<div class="col-md-3">
 				<nav class="col-md-offset-1 col-md-10">
-					<button>New Game</button>
-					<button>Save</button>
-					<button>Exit</button>
-					<button id='reveal_btn'>Reveal Game</button>
+					<button type='button'>New Game</button>
+					<button type='button'>Save</button>
+					<button type='button'>Exit</button>
+					<button type='button' id='reveal_btn'>Reveal Game</button>
 				</nav>
 				<form class='col-md-offset-1 col-md-10' id='guess_letter' action='post'>
-					<input value='B' id='letter_input' type='text' maxlength=1 placeholder='Enter Letter' required>
+					<input id='letter_input' type='text' maxlength=1 placeholder='Enter Letter' required>
+					<p>(Case Insensitive)</p>
 					<input type='submit' value='Submit'>
 				</form>
 				
@@ -29,8 +30,14 @@
 	</section>
 	<section id="bottom_panel" class="container">
 		<div class="row">
-			<div class="col-md-6">hello world</div>
-			<div class="col-md-6">hello world</div>
+			<div class="col-md-6" id="score">
+				<h2>Score</h2>
+				<p></p>
+			</div>
+			<div class="col-md-6" id='msgPane'>
+				<h2>Not Found</h2>
+				<p></p>
+			</div>
 		</div>
 	</section>
 <% include ./partials/footer %>

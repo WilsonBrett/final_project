@@ -21,3 +21,4 @@
 	vertical-align: -35px;
 	font-size: 32px;*/
 }
+$('#msgPane').append(character);
