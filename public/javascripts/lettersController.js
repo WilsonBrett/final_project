@@ -7,18 +7,14 @@
 		this.setLoop = function(len){
 			return new Array(len);
 		};
-
-		var phrase = ['A','B','C','D','E'];
-		var counter = 0;
+		this.setID = function(row,col) {
+			return (row * 12) + col;
+		}
+		var phrase = ['B','O','O','K','K','E','E','P','E','R'];
 
 		this.setBoxLetter = function(row, col) {
-			//console.log('hey');
 			var id = (row * 12) + col;
 			return phrase[id] || null;
-		};
-
-		this.hasLetter = function(val){
-			return val ? true:false ;
 		};
 
 		//this.getPhrase = function(){

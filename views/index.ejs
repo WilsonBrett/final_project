@@ -7,6 +7,7 @@
 					<letter
 						ng-repeat="cell in letrs.setLoop(12) track by $index"
 						phraseletter={{letrs.setBoxLetter($parent.$index,$index)}}
+						id={{letrs.setID($parent.$index,$index)}}
 					>
 					</letter>
 				</div>
@@ -16,11 +17,13 @@
 					<button>New Game</button>
 					<button>Save</button>
 					<button>Exit</button>
+					<button id='reveal_btn'>Reveal Game</button>
 				</nav>
-				<form class='col-md-offset-1 col-md-10' id='guess_letter' action='post' target='#'>
-					<input type='text' placeholder='Enter Letter'>
+				<form class='col-md-offset-1 col-md-10' id='guess_letter' action='post'>
+					<input value='B' id='letter_input' type='text' maxlength=1 placeholder='Enter Letter' required>
 					<input type='submit' value='Submit'>
 				</form>
+				
 			</div>
 		</div>
 	</section>
