@@ -14,10 +14,11 @@
 			</div>
 			<div class="col-md-3" ng-controller="LettersController as ctrl">
 				<nav class="col-md-offset-1 col-md-10">
-					<button type='button' ng-click='ctrl.getPhrase()'>New Game</button>
-					<button type='button'>Save</button>
-					<button type='button'>Exit</button>
-					<button type='button' id='reveal_btn'>Reveal Game</button>
+					<label>Menu</label>
+					<a href='/' class='button' type='button'>New Game</a>
+					<button class='button' type='button'>Save</button>
+					<a class='button' href='/exit'>Exit</a>
+					<button class='button' type='button' id='reveal_btn'>Reveal Game</button>
 				</nav>
 				<form class='col-md-offset-1 col-md-10' id='guess_letter' action='post'>
 					<input id='letter_input' type='text' maxlength=1 placeholder='Enter Letter' required>

@@ -45,7 +45,13 @@ nav {
 	padding: 2rem 0;
 	border-radius: 5px;
 }
-nav button {
+nav label {
+	display: block;
+	color: yellow;
+	text-align: center;
+	font-size: 2rem;
+}
+nav .button {
 	display: block;
 	width: 80%;
 	border: 1px solid grey;
@@ -54,11 +60,13 @@ nav button {
 	border-radius: 5px;
 	padding: .5rem 1rem;
 	margin: 1rem auto;
+	text-align: center;
 }
-nav button:hover {
+nav .button:hover {
 	background-color: yellow;
+	text-decoration: none;
 }
-nav button:active {
+nav .button:active {
 	background-color: orange;
 }
 .container {
@@ -166,6 +174,20 @@ nav button:active {
 #bottom_panel > div > div p {
 	letter-spacing: 2rem;
 	font-size: 3rem;
+}
+/*exit ejs styles*/
+#bye_msg h2 {
+	color: yellow;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+#bye_msg img {
+	display:block;
+	margin: 0 auto;
+	width: 50%;
+	margin-bottom: 2rem;
+	border: 1px solid grey;
+	border-radius: 5px;
 }
 
 

@@ -23,20 +23,27 @@
 			return (row * 12) + col;
 		}
 
-		this.phrase = ['B','O','O','K','K','E','E','P','E','R'];
+		function generatePhrase(){
+			var phrases = ["aussy aussy aussy","will work for nutella","tom brady bunch","sean shannon sharpe", "Sea Salt n Peppah"];
+			var index = Math.floor(Math.random()*phrases.length);
+			var new_phrase = phrases[index].toUpperCase().split("");
+			return new_phrase;
+		}
+
+		this.phrase = generatePhrase();
 
 		this.setBoxLetter = function(row, col) {
 			var id = (row * 12) + col;
-			return this.phrase[id] || null;
+			if(this.phrase[id] === " " || !this.phrase[id]){
+				return null;
+			} else {
+				return this.phrase[id];
+			}
 		};
 
 		this.getPhrase = function(){
-			var phrases = ["I LOVE TEXAS","GA ROCKS BALLS","TOM BRADY RULES","PEYTON MANNING SUCKS"];
-			var index = Math.floor(Math.random()*4);
-			var new_phrase = phrases[index].split("");
-			this.phrase.pop();
-			//console.log(this.phrase);
-			console.log(this.phrase);
+			var anything = generatePhrase();			
+
 		}
 	});
 

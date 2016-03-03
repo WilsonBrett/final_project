@@ -19,6 +19,10 @@ router.get('/phrases', function(req, res, next) {
 	});//closes query				  
 });
 
+router.get('/exit', function(req,res){
+	res.render('exit');
+});
+
 module.exports = router;
 
 
