@@ -82,7 +82,10 @@ nav button:active {
 	font-size: 0px !important;
 }
 .noletter {
-	background-color: lightgreen;
+	background-image: url('../images/cell.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 .reveal {
 	background-color: white;
