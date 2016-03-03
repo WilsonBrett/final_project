@@ -23,18 +23,20 @@
 			return (row * 12) + col;
 		}
 
-		var phrase = ['B','O','O','K','K','E','E','P','E','R'];
+		this.phrase = ['B','O','O','K','K','E','E','P','E','R'];
 
 		this.setBoxLetter = function(row, col) {
 			var id = (row * 12) + col;
-			return phrase[id] || null;
+			return this.phrase[id] || null;
 		};
 
 		this.getPhrase = function(){
-			var phrases = ["I love Texas","GA Rocks Balls","Tom Brady Rules","Peyton Manning Sucks"];
+			var phrases = ["I LOVE TEXAS","GA ROCKS BALLS","TOM BRADY RULES","PEYTON MANNING SUCKS"];
 			var index = Math.floor(Math.random()*4);
 			var new_phrase = phrases[index].split("");
-			console.log(new_phrase);
+			this.phrase.pop();
+			//console.log(this.phrase);
+			console.log(this.phrase);
 		}
 	});
 

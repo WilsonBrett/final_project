@@ -1,10 +1,11 @@
 $(function(){
 
-
+	//reveal button functionality
 	$('#reveal_btn').click(function(){
-		alert('puzzle revealed!');
+		$('.hasletter').attr('class','reveal');
 	});
 	
+	//check guessed letter functionality
 	$('#guess_letter').submit(function(evt){
 		evt.preventDefault();
 		var hits = 0; //counts the number of hits per submission and resets on submitted letter
