@@ -22,3 +22,5 @@
 	font-size: 32px;*/
 }
 $('#msgPane').append(character);
+
+headers: {encoding: 'utf8', 'Content-type': 'application/json'}
