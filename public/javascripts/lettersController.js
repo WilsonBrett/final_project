@@ -29,7 +29,7 @@
 			console.log(this.phrase);
 		}
 
-		this.newPhrase();
+		this.newGame();
 
 		this.setBoxLetter = function(row, col) {
 			var id = (row * 12) + col;
@@ -51,7 +51,7 @@
 			} else {
 				//set the 
 			}
-			console.log('row: ' + row + ' => col: ' + col);
+			//console.log('row: ' + row + ' => col: ' + col);
 			//letrs.setBoxLetter($parent.$index,$index) ? 'hasletter':'noletter'
 			//if the setboxletter function returns a value then the class becomes 'hasletter'
 			//if the setboxletter function does not return a value then the class becomes 'noletter'
