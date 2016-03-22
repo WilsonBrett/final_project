@@ -1,36 +1,33 @@
 <% include ./partials/header %>
 	<header><h1>R S T L N E !</h1></header>
-	<section class="container">
+	<section class="container" ng-controller="LettersController as letrs">
 		<div class="row">
-			<div id="main" class="col-md-9" ng-controller="LettersController as letrs">
-				<div class="row" ng-repeat="row in letrs.setLoop(4) track by $index">
-					<letter
-						ng-repeat="cell in letrs.setLoop(12) track by $index"
-						phraseletter={{letrs.setBoxLetter($parent.$index,$index)}}
-						id={{letrs.setID($parent.$index,$index)}}
-					>
-					</letter>
+			<div id="main" class="col-md-9">
+				<div class="row" ng-repeat="row in letrs.setLoop(4) track by $index" ng-init="r = $index">
+					<div class='col-md-1 letter_box' ng-repeat="cell in letrs.setLoop(12) track by $index" ng-init="c = $index">
+						<div id="{{(r * 12) + c}}" ng-class="letrs.setClass(r,c)">{{letrs.setBoxLetter(r,c)}}</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-3" ng-controller="LettersController as ctrl">
+			<div class="col-md-3">
 				<nav class="col-md-offset-1 col-md-10">
 					<label>Menu</label>
-					<a href='/' class='button' type='button'>New Game</a>
+					<!--<a href='/' class='button' type='button'>New Game</a>-->
+					<button ng-click='letrs.newGame()' class='button' type='button' id='newGmBtn'>New Game</button>
 					<a class='button' href='/exit'>Exit</a>
 					<button class='button' type='button' id='reveal_btn'>Reveal Game</button>
 				</nav>
-				<form class='col-md-offset-1 col-md-10' id='guess_letter' action='post'>
+				<form class='col-md-offset-1 col-md-10' id='guess_letter' action='post' autocomplete='off'>
 					<input id='letter_input' type='text' maxlength=1 placeholder='Enter Letter' required>
 					<p>(Case Insensitive)</p>
 					<input type='submit' value='Submit'>
 				</form>
-				
 			</div>
 		</div>
 	</section>
 	<section id="bottom_panel" class="container">
 		<div class="row">
-			<div class="col-md-6" id="score">
+			<div class="col-md-6" id="scoreBox">
 				<h2>Score</h2>
 				<p></p>
 			</div>

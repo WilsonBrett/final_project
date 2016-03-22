@@ -1,10 +1,19 @@
 $(function(){
+
 	var score = 0;
+	$('#newGmBtn').click(function(){
+		$('#letter_input').prop('disabled',false);
+		$("#guess_letter input[type='submit']").prop('disabled',false);
+		$('#msgPane p').empty();
+		$('#scoreBox p').empty();
+		score = 0;
+	});
 
 	//reveal button functionality
 	$('#reveal_btn').click(function(){
-		$('#letter_input').attr('disabled','true');
-		$('.hasletter').attr('class','reveal');
+		$('.hasletter').addClass('reveal');
+		$('#letter_input').prop('disabled',true);
+		$("#guess_letter input[type='submit']").prop('disabled',true);
 	});
 	
 	//check guessed letter functionality
@@ -14,11 +23,11 @@ $(function(){
 		var character = $('#letter_input').val().toUpperCase();
 		var letters = $('.letter_box').children();
 
-		$.each(letters, function(key, value){
+		$.each(letters, function(key, value) {
 			if(value.innerHTML) {//if the value of the letter is present check it against the input value
 				if(character === value.innerHTML) {
 					hits += 1;
-					$(letters[key]).attr('class','reveal');
+					$(letters[key]).addClass('reveal');
 					//check for a complete phrase somehow
 						//if (phrase is complete) {
 							//$('#msgBox').append('You Won!');
@@ -30,15 +39,16 @@ $(function(){
 			$('#letter_input').val(null);
 		}); //end of each loop
 
-		if (!hits) {//check to see if there were any matches and write the value to the msgPane if not
+		if (hits === 0) {//check to see if there were any matches and write the value to the msgPane if not
 			$('#msgPane p').append(character);
 			score -= 500;
-			$('#score p').empty();
-			$('#score p').append(score);
+			$('#scoreBox p').empty();
+			$('#scoreBox p').append(score);
 		} else {
+			console.log(score);
 			score += (hits * 500);
-			$('#score p').empty();
-			$('#score p').append(score);
+			$('#scoreBox p').empty();
+			$('#scoreBox p').append(score);
 		}
 	});
 });

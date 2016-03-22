@@ -86,10 +86,7 @@ nav .button:active {
 	padding-top: 2rem;
 }
 .hasletter {
-	background-image: url('../images/pat_head.jpg');
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+	background-color: white;
 	font-size: 0px !important;
 }
 .noletter {
@@ -142,17 +139,24 @@ nav .button:active {
 	padding: 1rem 2rem;
 	width: 80%;
 }
-#guess_letter input:invalid {
+#guess_letter input:invalid, #guess_letter input:valid {
 	border: none;
 	box-shadow: none;
+	outline-offset: none;
 }
-
+#guess_letter input:disabled {
+	border: none;
+	box-shadow: none;
+	background-color: rgb(50,50,50);
+}
 #guess_letter input[type='submit'] {
 	margin-top: 1rem;
 	border: 1px solid grey;
+	background-color: rgb(2,255,209);
 }
 #guess_letter input[type='submit']:hover {
 	background-color: yellow;
+
 }
 #guess_letter p {
 	margin-top: 1rem;
