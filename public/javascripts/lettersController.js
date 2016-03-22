@@ -33,7 +33,7 @@
 			var myEl = $("div#" + id);
 
 			if(myEl[0].innerText === "'") {
-				myEl.removeClass("reveal");
+				myEl.removeClass("hasletter");
 				myEl.removeClass("noletter");
 				return "reveal";
 			} else if(myEl[0].innerText) {
